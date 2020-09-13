@@ -16,7 +16,7 @@ if resp.status_code == 200:
 
     # open the actual wallpaper uri, and write the response as an image on the filesystem
     response = requests.get(wallpaper_uri)
-    if resp.status_code == 200:
+    if response.status_code == 200:
         with open(filename, 'wb') as f:
             f.write(response.content)
     else:
